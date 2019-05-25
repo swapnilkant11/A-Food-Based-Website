@@ -1,0 +1,12 @@
+#header{
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+.card-title{
+    font-family: 'Lobster', cursive;
+}
+.card-text{
+    font-family: 'Noticia Text', serif;
+}
