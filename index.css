@@ -1,0 +1,11 @@
+#navbar_menus{
+    color: white;
+    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+}
+.navbar_menus_right{
+    color: white;
+}
+.navbar_items:hover .navbar_menus_right{
+    opacity: 0.4;
+}
