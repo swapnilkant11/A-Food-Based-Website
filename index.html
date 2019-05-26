@@ -227,9 +227,16 @@
    <center> <h2>Enter Ingredients</h2></center></br></br>
               <div>
                     <div id="display" class="col-xs-4" style="text-align:center;">
-                            <input type="text" placeholder="Comma Separated Ingredients" class="form-control input-lg"  id="input"/>
+                            <input type="text" placeholder="Comma Separated Ingredients" class="form-control input-lg"  id="search2"/>
                     </div>
-              </div>
+                    <center><button href="" class="btn btn-primary" style = "margin-top: 10px" onclick="showDrop2()" >Click Here For Steps</button>
+                    </center></br></br></br></br>
+                  </div>
+
+
+                    <div id = "dropVideo"></div>
+                <!-- Dropdown Section 2 -->
+                <div id = "dropVideo2"></div>
             </section>
 
 
@@ -270,5 +277,316 @@
           }
           x[slideIndex-1].style.display = "block";  
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function showDrop2(){
+        var a = document.getElementById("search2").value;
+        console.log(a);
+        var o,firstDish,secondDish,thirdDish,fisrtLink,secondLink,thirdLink,size,fourthDish,fifthDish,sixthDish,fourthLink,fifthLink,sixthhLink;
+        var xhr= new XMLHttpRequest;
+        xhr.addEventListener('load',function(){
+              o = JSON.parse(this.responseText);
+              console.log(o);
+
+              size = o.results.length;
+              // console.log(size);
+
+              if(size == 0|| size == 1 || size == 2){
+                var z = `<div class="container-fluid" style = "padding: 20px;background-color: #E8E8E8" id = "drop2">
+                <center><h1>No recipes with following ingredients found ! Try refreshing the page and searching again. :)</h1></center></div>`
+                document.getElementById("dropVideo2").innerHTML = z;
+              } 
+          else{
+              
+               fisrtLink = o.results[0].href;
+               secondLink = o.results[1].href;
+               thirdLink = o.results[2].href;
+               fourthLink=o.results[3].href;
+               fifthLink=o.results[4].href;
+               sixthhLink=o.results[5].href;
+
+
+
+            
+
+              firstDish = o.results[0].title;
+              secondDish = o.results[1].title;
+              thirdDish = o.results[2].title;
+              fourthDish = o.results[3].title;
+              fifthDish = o.results[4].title;
+              sixthDish = o.results[5].title;
+
+
+
+
+            //   firstDish = strip(firstDish);
+            //   secondDish = strip(secondDish);
+            //   thirdDish = strip(thirdDish);
+
+              var y = `<div class="container-fluid" style = "padding: 20px;background-color: #E8E8E8" id = "drop2">
+                <div class="section-title text-center" style = "margin-bottom: 30px">
+                  <h2>Instructions</h2>
+                </div>
+
+
+              <div class = "row">
+                <div class = "col-md-4">
+                  <div class="card">
+                      <div class="card-body" style="border-style: 1px solid black margin-bottom:100px">
+                        <h1 id="head1"></h1>
+                        <a href="" class="btn btn-primary" style = "margin-top: 10px" id = "link1">Recipe 1</a>
+                   <br>
+                   <div class="item active">
+                    <iframe id="if1" src = "" height=200px width=300px;></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <span>
+            </span>
+
+
+            <div class = "col-md-4">
+              <div class="card">
+                <div class="card-body" style="border-style: 1px solid black">
+                  <h1 id = "head2"></h1>
+                  <a href="" class="btn btn-primary" style = "margin-top: 10px" id = "link2">Recipe 2</a>
+                   <br>
+                   <div class="item active">
+                    <iframe id="if2" src = "" height=200px width=300px;></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <span></span>
+
+
+
+            <div class = "col-md-4">
+              <div class="card">
+                <div class="card-body" style="border-style: 1px solid black margin-bottom:100px">
+                  <h1 id = "head3"></h1>
+                  <a href="" class="btn btn-primary" style = "margin-top: 10px" id = "link3">Recipe 3</a>
+                   <br>
+                   <div class="item active">
+                    <iframe id="if3" src = "" height=200px width=300px;></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <span>
+            </span>
+
+
+            <div class = "col-md-4">
+              <div class="card">
+                <div class="card-body" style="border-style: 1px solid black">
+                  <h1 id = "head4"></h1>
+                  <a href="" class="btn btn-primary" style = "margin-top: 10px" id = "link2">Recipe 2</a>
+                   <br>
+                   <div class="item active">
+                    <iframe id="if3" src = "" height=200px width=300px;></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <span>
+            </span>
+
+
+            <div class = "col-md-4">
+              <div class="card">
+                <div class="card-body" style="border-style: 1px solid black">
+                  <h1 id = "head5"></h1>
+                  <a href="" class="btn btn-primary" style = "margin-top: 10px" id = "link2">Recipe 2</a>
+                   <br>
+                   <div class="item active">
+                    <iframe id="if4" src = "" height=200px width=300px;></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <span>
+            </span>
+
+
+            <div class = "col-md-4">
+              <div class="card">
+                <div class="card-body" style="border-style: 1px solid black">
+                  <h1 id = "head6"></h1>
+                  <a href="" class="btn btn-primary" style = "margin-top: 10px" id = "link2">Recipe 2</a>
+                   <br>
+                   <div class="item active">
+                    <iframe id="if5" src = "" height=200px width=300px;></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>`
+
+          document.getElementById("dropVideo2").innerHTML = y;  
+          document.getElementById("head1").innerText=firstDish;
+          document.getElementById("head2").innerText=secondDish;
+          document.getElementById("head3").innerText=thirdDish;
+          document.getElementById("head4").innerText=fourthDish;
+          document.getElementById("head5").innerText=fifthDish;
+          document.getElementById("head6").innerText=sixthDish;
+
+
+
+          document.getElementById("head1").href=fisrtLink;
+          document.getElementById("head2").href=secondLink;
+          document.getElementById("head3").href=thirdLink;
+          document.getElementById("head1").href=fourthLink;
+          document.getElementById("head2").href=fifthLink;
+          document.getElementById("head3").href=sixthhLink;
+
+
+
+
+
+
+
+
+        var a = firstDish;
+        var d=secondDish;
+        var e=thirdDish;
+        var f=fourthDish;
+        var g=fifthDish;
+        var h=sixthDish;
+        //console.log(a);
+        //console.log(a);
+        //console.log(b);
+        // for(let d = 0 ; d < b.length - 1; d++){
+        //   c = c + b[d] + "+";
+        // }
+        // //console.log(c);
+        // c = c + b[b.length-1] + "+";
+        // //console.log(c);
+        let l = firstDish// + "recipe";
+        let m = secondDish //+ "recipe";
+        let n = thirdDish //+ "recipe";
+        let o1 = fourthDish //+ "recipe";
+        let p = fifthDish// +"recipe";
+        let q = sixthDish //+ "recipe";
+
+
+        console.log(l);
+
+        var dishes=[l,m,n,o1,p,q];
+
+        //console.log(dishes);
+
+        //console.log(c);
+        var r,s,t,u,v,z;
+          
+        let xhr= new XMLHttpRequest;
+        xhr.addEventListener('load',function(){
+             z = JSON.parse(xhr.responseText);
+              
+             // console.log(o);
+                 r = z.items[0].id.videoId;
+                 //console.log(r);
+                //  s = z.items[1].id.videoId;
+                //  //console.log(s);
+                //  t = z.items[2].id.videoId;
+                 //console.log(t);
+        
+        document.getElementById("if1").src="https://www.youtube.com/embed/" + r;
+          
+        });
+       // for(var i=0;i<dishes.length;i++){
+        xhr.open('GET',"https://www.googleapis.com/youtube/v3/search?part=snippet&q="+i+"&type=video&key=AIzaSyDggXIwlgpQL3TNnrqS73DyUh81ypWD3Bw")
+        //}
+        xhr.send();
+
+        
+
+
+
+
+
+
+          }});
+        
+      xhr.open('GET',"https://cors-anywhere.herokuapp.com/" + "http://www.recipepuppy.com/api/?i=" + a + "&q=&p=1")
+        xhr.send();
+  }
+
+
+
+
+
+
+
+
     </script>
 </html>
+
+<!-- 
+
+https://api.edamam.com/api/food-database/parser?app_id=052246ed&app_key=6ef7d8924bcfdd4a291cd03048f0f594&ingr=
+ -->
