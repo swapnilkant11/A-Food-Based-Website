@@ -27,7 +27,8 @@
   }
   
   #mainNav .navbar-brand {
-    color: white;
+    -webkit-text-stroke: 1px white;
+    color: black;
     font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   }
   
@@ -75,7 +76,11 @@
       padding: 12px 0;
     }
   }
-  
+  .head_logo:hover{
+    height:50px;
+    width:50px;
+        
+}
 
 
 
@@ -135,6 +140,27 @@ span{
 }
 .right:hover{
     opacity: 0.5;
+}
+.a_link{
+  text-decoration: none;
+  color: white;
+}
+
+.search_btn{
+  height: 50px;
+  /*line-height: 50px;*/
+  width:200px;
+  font-size: 30px;
+  left:41%;
+  position: absolute;
+  top:75%;
+  background-color:lightgrey;
+  color:black;
+  border-radius: 10px;
+  
+  text-align: center;
+  
+
 }
 
 
@@ -312,3 +338,86 @@ span{
     padding:1%;
      
   }
+  #h3{
+      text-align: center;
+      color: white;
+      font-size: 40px;
+  }
+#about{
+    background-image: url('https://images.unsplash.com/photo-1458387852194-bae1ec83d812?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=789&q=80');
+    color:gray;
+  }
+#portfolio{
+  background-image: url('https://wallpaperaccess.com/full/462860.jpg');
+
+}
+#p1{
+  font-family: 'Varela Round', sans-serif;
+  /*font-weight: bold;*/
+  color: yellow;
+  font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 35%;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  border-radius: 35%;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  border-radius: 35%;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+  border-radius: 35%;
+}.fa-pinterest {
+  background: #cb2027;
+  color: white;
+  border-radius: 35%;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 400px;
+  border: 2px solid whitesmoke;
+  text-align: center;
+  background-image: url("footer_backgrounf.jpg"); /* Should be removed. Only for demonstration */
+  border-radius: 50px;  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#
